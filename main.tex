@@ -56,11 +56,13 @@ ODI's needs.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Introduction}
 The One Degree Imager (ODI) has been the major instrument development project from 2004 to 2016 for 
-the WIYN 3.5 meter telescope (Kitt Peak, Arizona).  The instrument is designed for a one degree 
-square field of view with 64 Orthogonal Transfer Array (OTA) CCD sensor. A first incarnation of ODI 
+the WIYN 3.5 meter telescope (Kitt Peak, Arizona), and its design has been documented in various
+SPIE articles\cite{jacoby2002,Harbeck2008,Jacoby2008,Yeatts2008,Harbeck2010,Yeatts2010,harbeck2014,gopu2014,}. 
+The instrument is designed for a one degree  square field of view with 64 Orthogonal Transfer
+Array (OTA) CCD sensor. A first incarnation of ODI 
 was deployed in the summer of 2012 with a partially populated focal plane (with 13 out of 64 
 detectors installed); this  incarnation of ODI was called pODI and was described in detail the SPIE 
-Astronomical Telescopes + Instrumentation conference in 2014\cite{harbeckl2014}. 
+Astronomical Telescopes + Instrumentation conference in 2014\cite{harbeck2014}. 
 
 In that paper we outlined an incremental upgrade path for the instrument to a larger focal plane, 
 and in 2015 we have deployed ODI with am enlarged 5x6 detector array by adding 17 new detectors; 
@@ -90,9 +92,9 @@ new information since pODI only had one CCD attached per controller.
 
 \subsection{Tuning the acquisition software}
 
-The ODI data acquisition is described in detail in \cite{Yeatts2008,Yeatts2010}.
+The ODI data acquisition is described in detail in previous SPIE contributions\cite{Yeatts2008,Yeatts2010}.
 In short, the focal plane is read out by 20 Stargrasp CCD controllers which
-interface to a network switch via 20 separate !GB ethernet over fiber
+interface to a network switch via 20 separate 1GB ethernet over fiber
 connections. The switch itself bundles the data connection into a 10GB network
 backbone used by the ODI computers (three 24 core, 32GB RAM servers). The stream
 from the 30 CCDS is collected by a single server / java virtual machine that is
@@ -205,7 +207,7 @@ where the stray light contamination was determined to be of order of 30\%.
 The stray light is lopsided in the instrument, i.e., looking through the
 Nasmyth port, only the upper left side of port would be affected by the
 stray light. The instrument rotates at the Nasmyth port, and the effect of
-straylight onto flatfields can be easily demonstrated by formating the ratio
+straylight onto flatfields can be easily demonstrated by formatting the ratio
 of two flat fields with the instrument rotated by $180^\circ$ with respect
 to the telescope reference frame. Fig. \label{fig_flatfieldbaffle}
 
@@ -329,10 +331,9 @@ data logging and alerting on dry air humidity.
 
 \section{Summary}
 
-\acknowledgments
-
 
 %%%% References %%%%%
-\bibliography{odi} \bibliographystyle{spiejour}
+\bibliography{odi} 
+\bibliographystyle{spiejour}
 
 \end{document}
