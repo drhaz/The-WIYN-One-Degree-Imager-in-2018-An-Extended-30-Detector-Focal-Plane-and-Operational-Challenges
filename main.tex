@@ -293,21 +293,7 @@ to the telescope reference frame. Figure \label{fig_flatfieldbaffle}
 
 \subsection{Pupil ghost suppression using a two-bladed shutter}
 
-\begin{figure}
-    \includegraphics[height=8cm]{images/odishutterpupilghostsupression.png}
-    \hspace{0.5cm} \includegraphics[height=8cm]{images/odi_layeronepg.png}
-    
-    \caption{ \label{fig_pupilghost}Left: Formation of the pupil ghost in ODI:  light 
-        entering the instrument from the telescope (from the right) reflects of the
-        concave dewar window, and the converging beam reflects of the filter to
-        form an in-focus image of the telescope pupil. Right: Ratio of a flat
-        field taken with different shutter modes. The sensitivity variations between
-        pixels and detectors cancel out, but the excess ghosting light remains. Note
-        that this ratio shows the ghosting component created by filters that are at
-        a different location than in Fig. 1, and the pupil ghost is largely out of
-        focus.}
-    
-\end{figure}
+
 
 Reflections of the optical surfaces within WIYN One Degree Imager (ODI) produce
 internal ghosting, resulting inflat fields or exposures of the night sky to form
@@ -317,6 +303,22 @@ the actual wavelength of the light, but the residual light is still capable of
 producing a significant ghosting component. ODI’s dewar window is concave, and
 paired with the plane surface of the passband filter forms an imaging system
 that.
+
+\begin{figure}
+	\includegraphics[height=8cm]{images/odishutterpupilghostsupression.png}
+	\hspace{0.5cm} \includegraphics[height=8cm]{images/odi_layeronepg.png}
+	
+	\caption{ \label{fig_pupilghost}Left: Formation of the pupil ghost in ODI:  light 
+		entering the instrument from the telescope (from the right) reflects of the
+		concave dewar window, and the converging beam reflects of the filter to
+		form an in-focus image of the telescope pupil. Right: Ratio of a flat
+		field taken with different shutter modes. The sensitivity variations between
+		pixels and detectors cancel out, but the excess ghosting light remains. Note
+		that this ratio shows the ghosting component created by filters that are at
+		a different location than in Fig. 1, and the pupil ghost is largely out of
+		focus.}
+	
+\end{figure}
 
 The excess light of the pupil ghost is undesirable for several reasons: In
 night-sky observations it will produce an extra background component, but that
