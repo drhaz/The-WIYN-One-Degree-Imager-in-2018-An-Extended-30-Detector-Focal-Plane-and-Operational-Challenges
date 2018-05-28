@@ -1,4 +1,4 @@
-\documentclass[draft]{spieman}
+\documentclass[]{spieman}
 
 \usepackage[utf8]{inputenc} \usepackage{amsmath,amsfonts,amssymb}
 \usepackage{graphicx} \usepackage{grffile} \usepackage[colorlinks=true,
@@ -31,11 +31,14 @@ Tucson, AZ (USA)} \affil[c]{The University of Arizona, Tucson, AZ (USA)}
     
 We report on the performance of the upgraded One Degree Imager (ODI) at the WIYN
 3.5 meter telescope at the Kitt Peak Observatory. The focal plane has been
-expanded by additional sixteen detectors in spring / summer 2015. The now thirty
-Orthogonal Transfer Array CCD detectors has a field of view of 40’ x 48’ on the
+expanded by additional seventeen detectors in spring / summer 2015. The now 
+thirty
+Orthogonal Transfer Array CCD detectors provide a total field of view of 40’ x 
+48’ on the
 sky. The newly added detectors underwent a design revision to mitigate reduced
 charge transfer efficiency under low light conditions (fat zero problem). We
-discuss the imaging performance and challenges in the photometric calibration of
+discuss the performance of the focal plane and challenges in the photometric 
+calibration of
 the wide field of view, helped by the addition of telescope baffles. In a
 parallel project, we upgraded the instrument's filter mechanism, where a
 degrading worm-gear mechanism was replaced by a chain drive that is operating
@@ -59,68 +62,76 @@ ODI's needs.
 The One Degree Imager (ODI) has been the major instrument development project
 from 2004 to 2016 for the WIYN 3.5 meter telescope (Kitt Peak, Arizona), and its
 design has been documented in various SPIE conference contributions
-\cite{jacoby2002,Harbeck2008,Jacoby2008,Yeatts2008,Harbeck2010,Yeatts2010,harbeck2014,gopu2014,}.
- The instrument is designed for a one degree  square field of view with 64 Orthogonal Transfer Array 
-(OTA) CCD sensor. A first incarnation of ODI was deployed in the summer of 2012 with a partially 
-populated focal plane (with 13 out of 64 detectors installed); this  incarnation of ODI was called pODI 
-and was described in detail the SPIE Astronomical Telescopes + Instrumentation conference in 
-2014\cite{harbeck2014}. In that paper we outlined an incremental upgrade path for the instrument to a
-larger focal plane, and in 2015 we have deployed ODI with an enlarged 5x6
-detector array by adding 17 new detectors; this incarnation of ODI is generally
-referred to "5x6 ODI" or simply ODI, as now additional development of the focal
+\cite{jacoby2002, Harbeck2008, Jacoby2008, Yeatts2008, Harbeck2010, Yeatts2010, 
+harbeck2014, gopu2014,}. The instrument is designed for a one degree  square 
+field of view with 64 Orthogonal Transfer Array (OTA) CCD sensor. A first 
+incarnation of ODI was deployed in the summer of 2012 with a partially 
+populated focal plane (with 13 out of 64 detectors installed); this  
+incarnation of ODI was called pODI and was described in detail the SPIE 
+Astronomical Telescopes + Instrumentation conference in 2014\cite{harbeck2014}. 
+In that paper we outlined an incremental upgrade path for the instrument to a 
+larger focal plane, and in 2015 we have deployed ODI with an enlarged 5x6 
+detector array by adding 17 new detectors; this incarnation of ODI is generally 
+referred to "5x6 ODI" or simply ODI, as now additional development of the focal 
 plane is anticipated at this time.
 
 
-\section{Upgrade of the Instrument}
-* Upgraded in Tucson, AZ
-* 12 wafer run of Lot 7 detecors, which are a modified design to resolve a low light level charge transfer 
-efficiency issue\cite{harbeck2014}. The processing and packaging of the detectors at Imaging 
-Techonolgy Laboratory  (ITL, Tucson, AZ) \cite{lesser2012} yielded in 17 useful devices. The existing 13 
-Lot 6 devices from the pODi focal plane and the new detectors of Lot 7 were installed into the focal 
-plane  by ITL. Subsequently, the focal plane was installed back in to the dewar. 
+\section{Upgrade of the Instrument} * Upgraded in Tucson, AZ * 12 wafer run of
+Lot 7 detecors, which are a modified design to resolve a low light level charge
+transfer efficiency issue\cite{harbeck2014}. The processing and packaging of the
+detectors at Imaging Technolgy Laboratory  (ITL, Tucson, AZ) \cite{lesser2012}
+yielded in 17 useful devices. The existing 13 Lot 6 devices from the pODi focal
+plane and the new detectors of Lot 7 were installed into the focal plane  by
+ITL. Subsequently, the focal plane was installed back in to the dewar.
 
-The cryostat was refurbished during the focal plane upgrade. For once, numerous small leaks had 
-developed at on ehalf of the flex circuit vacuum feed throughs. Those had been sealed by adding 
-additional epoxy. 
+The cryostat was refurbished during the focal plane upgrade. For once, numerous
+small leaks had developed at on ehalf of the flex circuit vacuum feed throughs.
+Those had been sealed by adding additional epoxy.
 
-Inside the dewar we found indication of condensed outgassing, and the dewar was thouroughly 
-cleaned. 
+Inside the dewar we found indication of condensed outgassing, and the dewar was
+thoroughly cleaned.
 
-At the time of the refurbishment, the molecular sieve material in the dewar (Zeolite 5-A) had lost its 
-ability to adsorb gas in the dewar, leading to unmanageable short vacuum hold time of a few days only; 
-it is  suspected 
-that it was saturated by water, and it was hence replaced with fresh material. Nevertheless, about a 
-year after the upgrade we found the getter material to have saturated again, and at that time it was 
-replaced with a hydrophobic Zeolite ZSM-5. we found that this getter material performs equally well as 
-the fresh Zeolite 5-A, and after over two years in operations, there is no indication of saturation. 
+At the time of the refurbishment, the molecular sieve material in the dewar
+(Zeolite 5-A) had lost its ability to adsorb gas in the dewar, leading to
+unmanageable short vacuum hold time of a few days only; it is  suspected that it
+was saturated by water, and it was hence replaced with fresh material.
+Nevertheless, about a year after the upgrade we found the getter material to
+have saturated again, and at that time it was replaced with a hydrophobic
+Zeolite ZSM-5. we found that this getter material performs equally well as the
+fresh Zeolite 5-A, and after over two years in operations, there is no
+indication of saturation.
 
 
 \subsection{Focal Plane  Performance}
 
-As already demonstrated, the lowlight level charge transfer efficiency under low light level. Since the 
-5x6ODI focal plane also utilizes  Lot 6 detectors with the known issue, observations that depend on 
-the ful lfield of view still require minimum exposure level of the order of 100 electrons.
- The amplifier glow observerd in Lot 6 detectors is largely unchanged for Lot 6. The amplifier glow is 
- mitigated by shutting down the output drain for all detectors but those that are required for guide star 
- acquisition. 
+As already demonstrated, the low-light level charge transfer efficiency under
+low light level. Since the 5x6ODI focal plane also utilizes  Lot 6 detectors
+with the known issue, observations that depend on the full field of view still
+require minimum exposure level of the order of 100 electrons. The amplifier glow
+observed in Lot 6 detectors is largely unchanged for Lot 6. The amplifier glow
+is mitigated by shutting down the output drain for all detectors but those that
+are required for guide star acquisition.
 
 
-Controlling the output drain for the detectors leads to a change in the dissipated power per detector. 
-For pODI we estimated that the difference between output drain on and off amounts ot the order of 
-0.5W power difference per detector. Given 30 there are now detectors in the focal plane, during the 
-readout time while OD is turned on (typically 6.5 seconds) there will be an additional 30 Watts 
-dissipated in the focal plane. This can caus temeperature variations in the focal plane of the order of 
-several  few tens of  degree K, in particular during a high cadence use case. While the total cooling 
-power of the ODI focal plane would have been sufficient to cool the detectors, the temperature would 
-not be stable enough in a fully populated focal plane that would require varying the output drain 
-voltage. 
+Controlling the output drain for the detectors leads to a change in the
+dissipated power per detector. For pODI we estimated that the difference between
+output drain on and off amounts ot the order of 0.5W power difference per
+detector. Given 30 there are now detectors in the focal plane, during the
+readout time while OD is turned on (typically 6.5 seconds) there will be an
+additional 30 Watts dissipated in the focal plane. This can caus temeperature
+variations in the focal plane of the order of several  few tens of  degree K, in
+particular during a high cadence use case. While the total cooling power of the
+ODI focal plane would have been sufficient to cool the detectors, the
+temperature would not be stable enough in a fully populated focal plane that
+would require varying the output drain voltage.
 
 
-The Stargrasp CD controller used in ODI can control one or two detectors. For pODI, a maximum of one 
-detector was connected per CCD , 1/3 of the detectors remain on one to one connections.  For 
-crosstalk performance between detectors connected to the same controller was untested before the 
-upgrade, and after the upgrade we found no evidence af ony additional crosstalk. As before crosstalk 
-exists only between the amplifier of a single OTA device. 
+The Stargrasp CD controller used in ODI can control one or two detectors. For
+pODI, a maximum of one detector was connected per CCD , 1/3 of the detectors
+remain on one to one connections.  For crosstalk performance between detectors
+connected to the same controller was untested before the upgrade, and after the
+upgrade we found no evidence af ony additional crosstalk. As before crosstalk
+exists only between the amplifier of a single OTA device.
 
 
 
@@ -151,7 +162,7 @@ and commissioning phase:
 (ZFS....), and the data time to write fits files to disk was the major factor to
 slow down the data handling process. As a mitigation we equipped the acquisition
 server with a Raid 5 configured local storage array, utilizing only disks with a
-6G interface. The imaging data were then slowly transfered by a background
+6G interface. The imaging data were then slowly transferred by a background
 process to the storage appliance, both as a mid-term storage and to stage data
 for transfer into the ODI data archive.
 
@@ -162,7 +173,7 @@ limiting the number of data streams that are written in parallel to disk. As a
 mitigation, the FITS file writing routine was changed into a Callable that would
 be submitted to a multi-threaded Executor with 10 threads. An additional
 improvement in write performance was achieved by rewriting the fits io package
-to allow writing into BufferedOutputfile,
+to allow writing into {\tt BufferedOutputfile}.
 
 \item As part of the data storage process, a thumbnail image is generated for
 each detector to help the observer to judge image quality in real time. For
@@ -188,37 +199,46 @@ overhead is now limited by the detector and telescope performance.
 
 
 \section{Filter change mechanism upgrade and performance}
-
-\subsection{Motivation for filter drive upgrade} Initial worm drive;
-unlubricated due to proximity to filters. Bronze shaving that spread
-throughout instrument and facility.  Need to replace worm gears on an annual
-basis. Because of the gravity vector being parallel to all optical surfaces,
-the shavings have been assessed as no immediate threat to the instrument
-health.
-
-The issue was discovered a few month before the planned installation of ODI,
-and because of stakeholder and schedule priorities it was decided at that
-time to live with the filter drive problem and deal with it later.
-
-\subsection{Revised design and testing}
-
-Follow up on earlier chain drive concept, feasibility of such a drive was
-tested in a prototype. Build, and tested with 10000 in / out actuations.
-Worm gear dismantled afterwards, and inspected for wear. There was no
-indication of problems, hence decision to continue.
+ODI has a filter change mechanism that can hold up to nine filters, where each
+filter is about 42cm by 42 cm in size. Each filter is inserted an removed out of
+the beam by a semaphore-like filter arm that was originally driven by a worm
+gear\cite{Muller2008}. Due to the proximity to optical surfaces, the worm gear
+contact was operating without lubrication (steel on bronze contact). Already
+during integration testing it was realized that this drive did not meet
+requirements for operations, since as the stainless steel worm gear would slowly
+shave of the bronze gear on the filter arm. However, due to time and resource
+constraints this drive was deployed in operations in the pODI instrument, and
+the bronze gear was replaced on an annual basis (and the instrument was then
+cleanout out from bronze shavings, that at more than one occasion had caused
+issues by shorting filter position switches.
 
 
-\subsection{Performance of revised filter drive}
+In 2014 we have started a project to redesign the filter drive, where now 
+instead of a worm gear the filter arm would be driven directly by a chain 
+drive. The previously used custom-made gear box was replaced by a commercial, 
+encapsulated lubricated worm gear. A single filter arm drive was build at UW 
+Madison (Figure \ref{fig_filterdrive}, left), and the operation of the filter 
+drive was successfully demonstrated for over 6000 actuation. After testing, the 
+worm gear box was destructively opened and inspected for sings of wear - none 
+was found. 
+ 
+Upon successful testing, a full complement of nine filter drives were build at 
+the NOAO instrument shop, and the upgraded filter drive was installed into the 
+ODI instrument during the summer of 2015. The new drive has worked without 
+error ever after. 
 
 
+\begin{figure}[]
+	
+	\includegraphics[height=0.49\columnwidth]{images/filterdrivetest.png}
+	\includegraphics[height=0.49\columnwidth]{images/DSC_0309.JPG}
+	\caption{\label{fig_filterdrive} Left: Single filter arm test assembly. The 
+	42x42 cm filter is simulated by a drive. This assembly was used to 
+	stress-test the filter arm drive concept with order of six thousand in and 
+	out actuation. Right: Close-up of the three-filter layer assembly during 
+	installation at the instrument.   }
+\end{figure}
 
-
-
-
-\section{Scientific performance of the upgraded instrument}
-
-The deliveed image quality over the entire field of view as verified to be homogeneous and, when 
-atmospheric conditions allow, better then 0.4" in the SDSS g' band.
 
 
 \subsection{Straylight mitigation by additional baffles}
@@ -238,14 +258,19 @@ view through the instrument at the center and corner of the field of view.
 \begin{figure}[h]
 	\includegraphics[width=0.49\columnwidth]{images/straylight-center.png}
 	\includegraphics[width=0.49\columnwidth]{images/straylight-offcenter.png}
-	\caption{\label{fig_straylight} View through the ODI instrument and telescope
-		onto the WIYN flat field screen. Left: at the center of the field, where only
-		the mirror pupil is a major contributor of illumination. Right: View from the
-		upper left corner of the instrument. Additional stray light arcs become visible.
-		the upper two arcs originate from the off-field light that enters the instrument
-		directly off an reflection of the tertiary mirror. The third lower right arc is 
-		due to reflection of off field light off the tertiary, onto the primary mirror,
-		and  into the instrument. } 
+	\caption{\label{fig_straylight} View through the ODI instrument and 
+	telescope
+	onto the WIYN flat field screen. Left: at the center of the field, where 
+	only
+	the mirror pupil is a major contributor of illumination. Right: View from 
+	the
+	upper left corner of the instrument. Additional stray light arcs become
+	visible. the upper two arcs originate from the off-field light that enters 
+	the
+	instrument directly off an reflection of the tertiary mirror. The third 
+	lower
+	right arc is due to reflection of off field light off the tertiary, onto the
+	primary mirror, and  into the instrument. }
 \end{figure}
 
 
@@ -291,9 +316,8 @@ to the telescope reference frame. Figure \label{fig_flatfieldbaffle}
 }
 
 
-\subsection{Pupil ghost suppression using a two-bladed shutter}
 
-
+\subsection{Pupil ghost suppression using a two bladed shutter}
 
 Reflections of the optical surfaces within WIYN One Degree Imager (ODI) produce
 internal ghosting, resulting inflat fields or exposures of the night sky to form
@@ -358,49 +382,85 @@ component should remain visible in the image, as demonstrated in Figure
 \ref{fig_pupilghost}.
 
 
-\subsection{Condensation}
+\section{Condensation}
 
-remains issue, operational limit lowered to 70\% until full mitigation
-strategy implemented.
+A major operational limitation of ODI is the susceptibility of the dewar window
+to condensation. As the condensation itself will evaporate quickly under dryer
+conditions, we have found that inevitably a significant residue film would be
+left that can only be removed by mechanical cleaning (drag wiping with alcohol).
+The effect of the residue fil is detrimental for any scientific use of ODI,
+since it causes significant scattering and halos around objects. Of the order of
+50\%  of the light would be typically scattered from the PSF core into a bright
+halo.
 
+While the dewar window is surrounded by dry air outlets, we have identified
+several scenarios in which the humidity near the window is insufficiently
+controlled:
 
+\begin{enumerate}
+	\item {\bf The ambient humidity is above 70\% to 80\%}. The ODI instrument 
+	was not designed as an airtight, or slightly over pressurized instrument, 
+	and humid, ambient air can mix into the instrument cavity (the space 
+	between dewar window and front lens, where the filter arms, shutter, and 
+	atmospheric dispersion commentator are located).
+	
+	The initial design od ODI in fact foresees air to be actively removed from 
+	the instrument cavity in order to force a slow flow of ambient air through 
+	the instrument to improve thermal equalization. 
+	
+	Condensation typically appears when the shutter (located directly in front 
+	of the dewar window) is opened. While the shutter is closed, the injected 
+	dry air is confined to the small space between the dewar window and 
+	shutter. Once the shutter is opened, the  humid air of the instrument 
+	cavity mixes in, and condensation can form on the cold dewar window. 
+	
+	As immediate mitigation against condensation, operations of ODI are limited 
+	to ambient humidity below 70\%RH.
+	
+	\item {\bf Failure in dry air supply:} The dry air for ODI is generated by 
+	a dehumidifier. At several instances the supply has failed: Most often due 
+	to a failure in the supplying air compressor (contactor failure or power 
+	outages), but also due to a failure in the dehumidifier, or due to a 
+	rupture in the dry air supply line. In order to protect against failures in 
+	th edry air supply, we a redundant air compressor and a larger dry air 
+	resoirvoir tank were installed at the telescope site. 
 
-\section{Infrastructure upgrades}
+\end{enumerate}
 
-Lessons from pODI operations and early 5x6 ODI implemented:
-
-- Helium compressors on UPS: cascade of failures: power outage leads to cooling outage leads to 
-cold trap outgassing leads to vacuum interlock failure leads to warm up leads to the dark side. 
-
-- Redundant dry air compressor and buffer tank for condensation prevention. Again. power outages 
-and failures in compressor (mostly relay) had let to interruption in dry air supply.  Electronic 
-data logging and alerting on dry air humidity.
-
-
+Long term, a dewar window heater has to be installed  around the dewar window 
+to prevent condensation. Such a heater would have to provide of the order of 60 
+W power. Heater strips that can be glued to the perimeter of the dewar window 
+are readily available, and a the dewar window mount allows for the addition of 
+heaters with a modest machining effort.  
 
 
 \section{Summary}
 
-With the upgrade in 2015, the ODI instrument has reached a stable state and is a scientifically useful 
-instrument for the WIYN community. With the upgrade of the filter arm mechanism, the instrument 
-infrastructure is robust, and only condensation of the dewar window remains a limitation for 
-operations, and can be mitigated by the installation of  heater.  
+With the upgrade of the focal plane and the filter drives in 2015, the ODI
+instrument has reached a stable state and is a scientifically useful instrument
+for the WIYN community. With the upgrade of the filter arm mechanism, the
+instrument infrastructure is robust, and only condensation of the dewar window
+remains a limitation for operations, and can be mitigated by the installation of
+heater.
 
-It has been demonstrated before that the tip tilt image motion can be successfully compensated by 
-OTA detectors.  However, the amplifier glow in ODI prohibits the use of a detector for guide star 
-acquisition, and the idea of a local image motion compensation within an isokinetic patch is not 
-achievable with the devices developed for ODI. But even it the amplifier glow was addressed 
-successfully, 
-there are practical issues with implementing a rubber focal plane as envisioned in \cite{tonry2002}: The 
-density of  bright guide stars is insufficient in in some  optical passbands, in particular outside the 
-galactic plane. And it is not sufficiently established how one would go about the astrometric calibration 
-of a rubber focal plane.  Hence, neither the PanSTARRS survey nor the ODI instrument choose to 
-operate the focal plane in the rubber mode other than for demonstration purpose.  I
+It has been demonstrated before that the tip tilt image motion can be
+successfully compensated by OTA detectors.  However, the amplifier glow in ODI
+prohibits the use of a detector for guide star acquisition, and the idea of a
+local image motion compensation within an isokinetic patch is not achievable
+with the devices developed for ODI. But even it the amplifier glow was addressed
+successfully, there are practical issues with implementing a rubber focal plane
+as envisioned in \cite{tonry2002}: The density of  bright guide stars is
+insufficient in in some  optical passbands, in particular outside the galactic
+plane. And it is not sufficiently established how one would go about the
+astrometric calibration of a rubber focal plane.  Hence, neither the PanSTARRS
+survey nor the ODI instrument choose to operate the focal plane in the rubber
+mode other than for demonstration purpose.  I
 
-ODI is now an instrument in routine operations. The choice to use  OTA detectors in ODI has largely 
-complicated the operation of the focal plane and the subsequent data calibration without providing any 
-benefits over a conventional CDD. If the WIYN community were to refurbish the ODI instrument it would 
-be prudent to avoid OTA detectors in the future. 
+ODI is now an instrument in routine operations. The choice to use  OTA detectors
+in ODI has largely complicated the operation of the focal plane and the
+subsequent data calibration without providing any benefits over a conventional
+CDD. If the WIYN community were to refurbish the ODI instrument it would be
+prudent to avoid OTA detectors in the future.
  
 %%%% References %%%%%
 \bibliography{odi} 
