@@ -254,7 +254,7 @@ overhead is now limited by the detector and telescope performance.
 	\centering
 	\hfill
 	\includegraphics[height=0.49\textwidth]{images/filterdrivetest.png}
-	\hfil
+	\hfill
 	\includegraphics[height=0.49\textwidth]{images/DSC_0309.JPG}
 	\hfill
 	\caption{\label{fig_filterdrive} Left: Single filter arm test assembly. The 
@@ -270,24 +270,21 @@ ODI has a filter change mechanism that can hold up to nine filters, where each
 filter is about 42cm by 42 cm in size. Each filter is inserted an removed out of
 the beam by a semaphore-like filter arm that was originally driven by a worm
 gear\cite{Muller2008}. Due to the proximity to optical surfaces, the worm gear
-contact was operating without lubrication (steel on bronze contact). Already
-during integration testing it was realized that this drive did not meet
-requirements for operations, since as the stainless steel worm gear would slowly
+contact was operating without lubrication (steel on bronze contact). 
+During integration testing of pODI in 2012 it was realized that this drive would not 
+be viable for long-term operations, as the stainless steel worm gear would slowly
 shave of the bronze gear on the filter arm. However, due to time and resource
-constraints this drive was deployed in operations in the pODI instrument, and
-the bronze gear was replaced on an annual basis (and the instrument was then
-cleanout out from bronze shavings, that at more than one occasion had caused
-issues by shorting filter position switches.
+constraints, pODI was deployed as is, and the bronze gear was replaced on an annual basis
+due to wear and tear.
 
 
-In 2014 we have started a project to redesign the filter drive, where now 
+In 2014 we  started a project to redesign the filter drive, where now 
 instead of a worm gear the filter arm would be driven directly by a chain 
-drive. The previously used custom-made gear box was replaced by a commercial, 
-encapsulated lubricated worm gear. A single filter arm drive was build at UW 
-Madison (Figure \ref{fig_filterdrive}, left), and the operation of the filter 
-drive was successfully demonstrated for over 6000 actuation. After testing, the 
-worm gear box was destructively opened and inspected for sings of wear - none 
-was found. 
+drive. The original custom-made gear box of the filter drive was replaced by a commercial, 
+encapsulated lubricated worm gear. A single chain-driven filter arm protoype was designed and build
+at UW Madison (Figure \ref{fig_filterdrive}, left), and its operation was  successfully demonstrated 
+by  over 6000 actuation. After testing, the worm gear box was destructively inspected sings of 
+excessive wear - none  was found. 
  
 Upon successful testing, a full complement of nine filter drives were build at 
 the NOAO instrument shop, and the upgraded filter drive was installed into the 
@@ -296,18 +293,18 @@ right). The new drive has worked without  errors ever after.
 
 
 
-\subsection{Straylight mitigation by additional baffles}
+\section{Straylight and Mitigation by additional baffles}
 
-Before ODI was deployed, a detailed straylight analysis (Photon Engineering)
-indicated that a significant contribution of off stray light can be expected to
-fall onto the ODI focal plane. The two major contributors are (i) off-axis rays
-reflecting off the tertiary mirror, then the primary mirror, and then entering
-the instrument and (ii) off-axis rays reflecting off the tertiary mirror,
+Before pODI was deployed, a detailed straylight analysis executed by Photon Engineering (Tucson, AZ)
+indicated that a significant contribution of  stray light was to be expected on the ODI focal plane.
+The two major contributors are (i) off-axis rays
+reflecting off the tertiary mirror, then the primary mirror, finally entering
+the instrument and (ii) off-axis rays reflecting directly off the tertiary mirror,
 entering the instrument. The first stray light mode had already been addressed
 by installing an additional baffle at the entrance aperture of ODI. The latter
 stray light path, however, had not been mitigated yet. The impact of the
 straylight is clearly visible in Figure\ref{fig_straylight}, where we show the
-view through the instrument at the center and corner of the field of view.
+view through the instrument (with the dewar removed) at the center and upper left corner of the field of view.
 
 
 \begin{figure}[]
@@ -330,19 +327,25 @@ view through the instrument at the center and corner of the field of view.
 \end{figure}
 
 
-While for the initial pODI instrument with a smaller focal plane the stray
-light did not significantly affect operations, the extended focal plane of
-ODI was found to be indeed heavily affected by the second stray light path.
-For night time observations the straylight manifests in additional
-background structure, it is detrimental for the acquisition of flat field,
-where the stray light contamination was determined to be of order of 30\%.
-
-The straylight is loopsided in the instrument, i.e., looking through the
+For the initial pODI deployment with a smaller focal plane the stray
+light did not significantly affect operations; the extended focal plane of
+5x6 ODI was found to be strongly affected by the second stray light path.
+For night time observations the stray light manifests in additional
+background structure that can be subtracted; it is detrimental for the acquisition 
+calibrating flat field images, where the stray light contamination was determined to
+be of order of 30\%. The straylight is loopsided in the instrument, i.e., looking through the
 Nasmyth port, only the upper left side of port would be affected by the
-stray light. The instrument rotates at the Nasmyth port, and the effect of
-straylight onto flatfields can be easily demonstrated by formatting the ratio
-of two flat fields with the instrument rotated by $180^\circ$ with respect
-to the telescope reference frame. Figure \label{fig_flatfieldbaffle}
+stray light, as one would conclude from Figure \ref{fig_straylight}.
+
+The straylight  can be readily identified by comparing flat fields that are 
+taken at different instrument rotations. We demonstrate this in Figure \label{fig_flatfieldbaffle},
+ where for a set of the g'r'i'z' filters we show the ratio of dome flats that 
+ were taken with a nominal instrument rotation of plus and minus 90 degrees.  In
+ case of a flat illumination, one would expect a constant ratio of unity in those images. 
+  The flat field ratios however show a strong sign of (i) central pupil ghosts (see next section) and (ii) stray light in the 
+ lower left corner.
+
+ 
 
 \afterpage{%
     \clearpage% Flush earlier floats (otherwise order might not be correct)
@@ -372,10 +375,15 @@ to the telescope reference frame. Figure \label{fig_flatfieldbaffle}
 }
 
 
+The straylight was mitigated by installing two additional baffles according to Photon
+Engineering's recommendation  at the telescope: One larger ring baffle around the tertiary mirror, 
+and one slim ring around the secondary baffle. Those baffles sufficiently block the 
+stray light paths that can be seen in Figure \ref{fig_straylight}.
+
 
 \subsection{Pupil ghost suppression using a two bladed shutter}
 
-Reflections of the optical surfaces within WIYN One Degree Imager (ODI) produce
+Reflections of the optical surfaces within ODI produce
 internal ghosting, resulting inflat fields or exposures of the night sky to form
 an image of the telescope pupil. Thanks to anti-reflection coatings on the
 optics, each reflection is suppressed to about about 1\%-2\% level, depending on
