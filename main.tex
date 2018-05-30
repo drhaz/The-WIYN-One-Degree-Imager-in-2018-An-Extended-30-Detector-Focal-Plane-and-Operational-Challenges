@@ -358,30 +358,44 @@ in the lower left corner.
  
 
 \afterpage{%
-    \clearpage% Flush earlier floats (otherwise order might not be correct)
+    % Flush earlier floats (otherwise order might not be correct)
     \thispagestyle{empty}% empty page style (?)
     \begin{landscape}% Landscape page
         \centering % Center table
-        \begin{figure} \begin{tabular}{ccccc} odi u' & odi g' & odi r & odi
-                i & odi z \\ \hline \multicolumn{5}{c}{ratio of $\pm 90 \deg$ flat
-                    fields, no baffle} \\ \hline
-                \includegraphics[width=0.2\textwidth]{images/nobaffle_u.png} &
-                \includegraphics[width=0.2\textwidth]{images/nobaffle_g.png} &
-                \includegraphics[width=0.2\textwidth]{images/nobaffle_r.png} &
-                \includegraphics[width=0.2\textwidth]{images/nobaffle_i.png} &
-                \includegraphics[width=0.2\textwidth]{images/nobaffle_z.png} \\
-                \hline
+        \begin{figure} 
+            \centering
+            \begin{tabular}{ccccc} odi u' & odi g' & odi r' & od i'
+                i & odi z' \\ \hline \multicolumn{5}{c}{ratio of $\pm 90 \deg$ flat
+                    fields, no baffle} \\[1ex]
+                 
+                \includegraphics[width=0.17\columnwidth]{images/nobaffle_u.png} &
+                \includegraphics[width=0.17\columnwidth]{images/nobaffle_g.png} &
+                \includegraphics[width=0.17\columnwidth]{images/nobaffle_r.png} &
+                \includegraphics[width=0.17\columnwidth]{images/nobaffle_i.png} &
+                \includegraphics[width=0.17\columnwidth]{images/nobaffle_z.png} \\[1ex]
                 
+                
+                \includegraphics[width=0.17\columnwidth]{images/baffle_u.png} &
+                \includegraphics[width=0.17\columnwidth]{images/baffle_g.png} &
+                \includegraphics[width=0.17\columnwidth]{images/baffle_r.png} &
+                \includegraphics[width=0.17\columnwidth]{images/baffle_i.png} &
+                \includegraphics[width=0.17\columnwidth]{images/baffle_z.png} \\[1ex] 
+                \multicolumn{5}{c}{ratio of $\pm 90 \deg$ flat
+                    fields, with baffle} \\[2ex] 
             \end{tabular}
             
-            \caption{\label{fig_flatfieldbaffle} Ratios of flat field images
-                taken at an instrument rotator angle of $+90^\circ$ $-90^\circ$ 
-                for all ODI broad band filters. }
+            \caption{\label{fig_flatfieldbaffle} Ratios of dome flat field images
+                taken at an instrument rotator angle of $+90^\circ$ and $-90^\circ$ 
+                for all ODI broad band filters. In a stray light free  instrument, the ratio should 
+                be uniform. Top: flat field ratios before the telescope baffle installation. 
+                bottom: flat field ratios after telescope baffle installation. With the telscope 
+                baffles installed, only ghosting from the instrument remains in the flat field 
+                ratio; the mitigation of this ghosting is discussed in section \ref{sect_ghost} }
             
         \end{figure}
         
     \end{landscape} 
-  \clearpage% Flush page
+  % Flush page
 }
 
 
@@ -393,6 +407,7 @@ baffles sufficiently block the stray light paths that can be seen in Figure
 
 
 \subsection{Pupil ghost suppression using a two bladed shutter}
+\label{sect_ghost}
 
 Reflections of the optical surfaces within ODI produce internal ghosting that
 contaminate flat field calibration or science exposures.The major contributing
