@@ -5,8 +5,7 @@
 allcolors=blue]{hyperref} \usepackage{pdflscape} \usepackage{afterpage}
 
 % Title definition
-\title {The WIYN One Degree Imager in 2018: An Extended 30-Detector Focal Plane
-and Operational Challenges}
+\title {The WIYN One Degree Imager in 2018: An Extended 30-Detector Focal Plane}
 
 \author[a,b]{Daniel R. Harbeck} \author[c]{Mike Lesser} \author[b]{Wilson Liu}
 \author[d]{Bob Stupak} \author[d]{Ron George} \author[d]{Ron Harris}
@@ -60,38 +59,46 @@ ODI's needs.
 \section{Introduction}
 
 The One Degree Imager (ODI) has been the major instrument development project
-from 2002 to 2016 for the WIYN 3.5 meter telescope (Kitt Peak, Arizona), and its
+from 2002 to 2015 at the WIYN 3.5 meter telescope (Kitt Peak, Arizona), and its design and 
 progress has been documented in various SPIE conference contributions
 \cite{jacoby2002, Harbeck2008, Jacoby2008, Yeatts2008, Harbeck2010, Yeatts2010, 
 harbeck2014, gopu2014}. The instrument is designed for a one degree  square 
 field of view with 64 Orthogonal Transfer Array (OTA) CCD sensor. A first 
 incarnation of ODI was deployed in the summer of 2012 with a partially 
 populated focal plane (with 13 out of 64 detectors installed); this  
-incarnation of ODI was called pODI and was described in detail the SPIE 
+incarnation of ODI was called pODI and was described in detail at the SPIE 
 Astronomical Telescopes + Instrumentation conference in 2014\cite{harbeck2014}. 
 In that paper we outlined an incremental upgrade path for the instrument to a 
-larger focal plane, and in 2015 we have deployed ODI with an enlarged 5x6 
-detector array by adding 17 new detectors; this incarnation of ODI is generally 
-referred to "5x6 ODI", or simply ODI, as now additional development of the 
-focal plane is planned at this point.
+larger focal plane; we have followed that path, In 2015, ODI was upgraded and 
+deployed at WIYN  with an enlarged 5x6  detector array by adding 17 new detectors;
+this incarnation of ODI is generally  referred to "5x6 ODI", or simply ODI, as no
+additional development of the focal plane is planned at this point. In this paper we report 
+on the status of the instrument after this upgrade. 
 
 
 \section{Upgrade of the Instrument} 
 
-A 12 wafer demonstration run (Lot 7) showed that with a design modification a 
-severe low light level transfer inefficiency issue was 
-resolved\cite{harbeck2014}.  Further wafer processing at Imaging Technology 
-Laboratory (ITL, Tucson, AZ) yielded in 16 additional Lot 7 detectors that were 
-designated for the ODI focal plane. With the processing of those wafers, the 
+ODI is designed to use Orthogonal Transfer Array (OTA) CCD detectors that have the unique
+capability to move charge on both imaging dimensions during an integration in order to compensate for 
+unwanted image motion. This concept has been demonstrated in pODI.  The detectors in pODI (production Lot 6)
+had problems with (i) amplifier glow and (ii)  charge transfer efficiency under low light level conditions 
+("fat zero" problem). The amplifier glow is mitigated by throttling the output drain voltage of the detectors 
+during integration. The fat zero problem was traced to a structure between the imaging area and the serial output register. 
+
+A  12 wafer demonstration run (Lot 7) showed that the low light level transfer inefficiency issue was 
+resolved by a modification\cite{harbeck2014}, and all wafers of that batch were processed 
+into packaged detectors at Imaging Technology 
+Laboratory (ITL, Tucson, AZ),  yielding a total of 16 operational  Lot 7 OTA detectors that were 
+designated for the ODI focal plane. After  processing these wafers, the 
 processing equipment for ODI OTA detectors has been retired at ITL. 
 
 The instrument was taken out of commission for upgrading from November 2014 to 
 May 2015. The focal plane was immediately removed from the instrument and sent 
 to  Imaging Technology Laboratory  (ITL) in Tucson, AZ to add the 16 new 
-detectors; an additional Lot 6 devices was identified to be added to the focal 
-plane as well. The 14 Lot 6 and 16 Lot 7 detectors were arranged on the focal 
+detectors; an additional Lot 6 device was identified and added to the focal 
+plane as well. The 14 Lot 6 and 16 Lot 7 detectors were mounted on the focal 
 plane to result in a contiguous 4x4 area of Lot 7 detectors, with the remaining 
-Lot 6 detectors filling up an area to a 5 by 6 detector array.
+Lot 6 detectors filling up an area to a 5 by 6 detector array (See Figure \ref{fig_focalplane}).
 
 
 \begin{figure}
@@ -113,86 +120,84 @@ Lot 6 detectors filling up an area to a 5 by 6 detector array.
 While the focal plane was repopulated with detectors, the cryostat and the 
 instrument hardware were refurbished. We found in particular:
 \begin{itemize}
-	\item Some epoxy-sealed vacuum feed throughs had developed slow leaks. We 
-	attribute those to thermally cycling of the nearby CCD controllers. We have 
-	changed the daytime idle position of the instrument to prevent the 
-	formation of hot pockets near the vacuum seals.
+	\item Some epoxy-sealed vacuum feed throughs had developed  leaks. We 
+	attribute those to the thermally cycling casued by the nearby CCD controllers. 
+	The daytime idle position of the instrument was changed to prevent the 
+	formation of heat pockets near the vacuum seals, and to allow a better
+	convective cooling flow in the CCD controller chassis.
 	
-	\item We have identified areas of outgassing residue inside the dewar; 
+	\item Inside the dewar we have identified areas of outgassing residue; 
 	those areas have been cleaned. 
 	
-	\item The optical surfaces of ODI have been clean, including the inside of 
-	the cryostat's dewar window. 
+	\item The optical surfaces of ODI's corrector optics needed cleaning,
+	 including the inside of the cryostat's dewar window. 
 	
 	\item The lubricant in a ring bearing for the atmospheric dispersion 
-	corrector (ADC) prism had separated, and the liquid component started to 
-	flow 
-	over one of the prisms. The optics were cleaned with no detrimental effect 
+	corrector (ADC) prism had separated, and the liquid oil component started to 
+	flow over one of the prisms. The optics were cleaned with no detrimental effect 
 	to the surface and anti-reflection coating. Since the ADC bearings operate 
 	only at a very slow speed, the lubricant had been entirely removed from the 
 	ring bearings to avoid the risk of future leaks. 
 	
 
-\item  Molecular sieve: At the time of the refurbishment, the molecular 
+\item  At the time of the dewar refurbishment, the molecular 
 sieve material in the dewar (Zeolite 5-A) had lost its ability to adsorb gas in 
 the dewar, leading to unmanageable short vacuum hold time of a few days only 
-and it was hence  replaced with fresh material 5-A material.
+and it was hence  replaced with fresh material 5-A material. In the past, the 
+Zeolite 5-A had been replaced on an annual basis due to its saturation. Since 
+replacing the Zeolite in the dewar is an expensive and labour intensive operation, 
+we started to investigate hydrophobic Zeolite ZSM-5 as a replacement candidate. Since 
+ZSM-5 does not permanently bind water s 5-A does, it can be regenerated by vacuum 
+pumping at room temperature. 
 
-A year after the upgrade we found the molecular sieve material to
-have saturated again (presumably with water), and at that time it was replaced 
-with a hydrophobic Zeolite ZSM-5, which we found to perform equally well in the 
-ODI dewar. After more than three years of operations, the ZSM-5 material still 
-performs well. We note, however, that the ODI dewar is warmed up and pumped on 
-a regular bases (every few months), which is regenerating the ZSM-5's ability 
-to adsorb gas.
+A year after the upgrade we found the Zeolite 5-A to  saturated again, and at that
+time it was replaced with Zeolite ZSM-5. After more than three years of operations, 
+the ZSM-5 material still performs well and shows no signs of saturation. We note 
+that the ODI dewar is warmed up and vacuum-pumped a regular bases (every few months), 
+which is regenerating the ZSM-5's ability to adsorb gas.
 \end{itemize}
 
 \subsection{Focal Plane  Performance}
 
-As already demonstrated, the low-light level charge transfer efficiency under
-low light level. Since the 5x6ODI focal plane also utilizes  Lot 6 detectors
-with the known issue, observations that depend on the full field of view still
-require minimum exposure level of the order of 100 electrons. The amplifier glow
-observed in Lot 6 detectors is largely unchanged for Lot 6. The amplifier glow
-is mitigated by shutting down the output drain for all detectors but those that
-are required for guide star acquisition.
+as expected the Lot 7 OTA detectors performed similar to the Lot 6 detectors, but without the 
+low light level charge transfer efficiency problem. Since the 5x6ODI focal plane  utilizes  both 
+Lot 6 and Lot 7 detectors, observations that depend on the full field of view still
+require minimum exposure level of the order of 100 electrons. If the smaller field of view of
+the continuous Lot 7 sub-array is sufficient, those restrictions do not apply. The amplifier glow
+observed in Lot 6 detectors remains unchanged, and is mitigated by throttling  the output drain 
+voltage for all detectors but those that are used for guide star acquisition.
+
+Controlling the output drain of the OTA detectors during integration and idling leads to a change 
+in their power dissipation . We estimated the  difference between the
+output drain on and off to about 0.5W per detector. Reading out the detectors with output drain on
+will hence dissipate an additional 15 Watts into the focal plane for the readout time of about 6 seconds. 
+This causes temperature variations in the focal plane of the order of several  few tens of to a full degree K, in
+particular during a high cadence use cases. While the total cooling power of the
+ODI focal plane would be sufficient to cool a focal plane that was populated with 64 OTA detectors, 
+the temperature could not be held stable due to the need to throttle the output drain voltage during integration.
 
 
-Controlling the output drain for the detectors leads to a change in the
-dissipated power per detector. For pODI we estimated that the difference between
-output drain on and off amounts ot the order of 0.5W power difference per
-detector. Given 30 there are now detectors in the focal plane, during the
-readout time while OD is turned on (typically 6.5 seconds) there will be an
-additional 30 Watts dissipated in the focal plane. This can cause temperature
-variations in the focal plane of the order of several  few tens of  degree K, in
-particular during a high cadence use case. While the total cooling power of the
-ODI focal plane would have been sufficient to cool the detectors, the
-temperature would not be stable enough in a fully populated focal plane that
-would require varying the output drain voltage.
-
-
-The Stargrasp CD controller used in ODI can control one or two detectors. For
-pODI, a maximum of one detector was connected per CCD , 1/3 of the detectors
-remain on one to one connections.  For crosstalk performance between detectors
-connected to the same controller was untested before the upgrade, and after the
-upgrade we found no evidence af ony additional crosstalk. As before crosstalk
-exists only between the amplifier of a single OTA device.
+The Stargrasp CCD controller\cite{Onaka2008} used in ODI can control one or two detectors per board. For
+pODI, a maximum of one detector was connected per CCD, and the cross-talk behaviour for two connected detectors was 
+not yet demonstrated in ODI. In the 5x6 ODI focal plane, 2/3 of the detectors share a controller board, whereas 1/3
+of the detectors are controlled by a single Stargrasp board each. No evidence of cross-talk between the two channels 
+of a Stargrasp board was found. 
 
 
 
 \subsection{Tuning the acquisition software}
 
-The ODI data acquisition is described in detail in previous SPIE
+The ODI data acquisition software is described in detail in previous SPIE
  contributions\cite{Yeatts2008,Yeatts2010}.
-In short, the focal plane is read out by 20 Stargrasp CCD controllers which
-interface to a network switch via 20 separate 1GB ethernet over fiber
+In short, the 5x6 ODI focal plane is read out by 20 Stargrasp CCD controllers which
+interface to a network switch via individual  1GB ethernet over fiber
 connections. The switch itself bundles the data connection into a 10GB network
-backbone used by the ODI computers (three 24 core, 32GB RAM servers). The stream
-from the 30 CCDS is collected by a single server / java virtual machine that is
-managed by a JBOSS 5 application server. The data are stored to disk.
+backbone used by the ODI computers (three units with 24 cores, 32GB RAM each). The 
+data stream from the 30 CCDS is collected by a single server / java virtual machine that is
+managed by a JBOSS 5 application server. From there, data are saved to a storage device. 
 
-The amount of data has more than doubled (from 13 detectors to now 30), and as
-the detectors are read out in parallel, so has the data rate. The scalability of
+The data rate has more than doubled (from 13 detectors to now 30) to about 1 Gigabyte that 
+downloads from the detectors in about 6 seconds.  The scalability of
 the data acquisition system was tested before the upgrade by creating a mock-up
 focal plane  configuration to simulate the enlarged focal plane. This test
 revealed some bottlenecks: the interval between sustained bias readouts
@@ -203,22 +208,22 @@ and commissioning phase:
 
 \begin{enumerate} 
     
-\item For pODI, all data were stored to a NFS mounted Oracle storage appliance
-(ZFS....), and the data time to write fits files to disk was the major factor to
+\item For pODI, all data were stored to NFS-mounted storage devices (Oracle ZFS appliance)
+ and the delay in  write fits files to disk was the major factor to
 slow down the data handling process. As a mitigation we equipped the acquisition
 server with a Raid 5 configured local storage array, utilizing only disks with a
-6G interface. The imaging data were then slowly transferred by a background
-process to the storage appliance, both as a mid-term storage and to stage data
-for transfer into the ODI data archive.
+6G interface; new images are now first stored on the local hard drives. The image data 
+are then slowly transferred by a background process to the storage appliance, 
+both as a mid-term storage and to stage data for transfer into the ODI data archive.
 
-\item  The simultaneous receiving of the data streams from 30 detectors posed no
-major challenge over the 10GB network backbone.  However, when writing the the
+\item   Simultaneously receiving of the data streams from 30 detectors via TCP/IP posed no
+major challenge for the 10GB network backbone.  However, when writing the the
 data to disk we realized a significant  improvement in the write speed by
 limiting the number of data streams that are written in parallel to disk. As a
-mitigation, the FITS file writing routine was changed into a Callable that would
-be submitted to a multi-threaded Executor with 10 threads. An additional
-improvement in write performance was achieved by rewriting the fits io package
-to allow writing into {\tt BufferedOutputfile}.
+mitigation, the FITS file writing routine was changed into a Java {\tt Callable} that would
+be submitted to a multi-threaded Executor, and we determined that ten storage threads delivered
+a good performance. The write performance was further improved by rewriting the {\tt nom.tam.fits} package
+to allow writing into {\tt BufferedOutputfile}. 
 
 \item As part of the data storage process, a thumbnail image is generated for
 each detector to help the observer to judge image quality in real time. For
@@ -227,9 +232,9 @@ called after the images were written to disk, reading back (and decoding) the
 fits file again. Also, the thumbnail generation process was unnecessarily
 serialized in the data acquisition process, i.e., telescope observations would
 be blocked until thumbnail images were generated.  For 5x6 ODI we have moved the
-thumbnail generation into the JVM, were the data were already in memory, hence
+thumbnail generation into the Java virtual machine, were the data are already in memory, hence
 saving I/O and CPU time for FITS decoding. Furthermore, the generation of the
-thumbnails was delegated to a lower priority background threads, making the
+thumbnails was delegated to  lower priority background threads, making the
 thumbnail generation an asynchronous process.
 
     
@@ -237,9 +242,8 @@ thumbnail generation an asynchronous process.
 
 As indicated by prior testing, the existing IT infrastructure was capable of
 handling the larger focal plane after some investments into faster local
-storage and by serializing write processes. The key was to serialize writing
-large amounts of data to a hard drive. After each readout, about 6 seconds
-are spend to flush the detector to remove residual charge, the readout
+storage and by serializing the data storage  processes.  After each readout, about 6 seconds
+are spend to flush the detector to remove residual charge, and the readout
 overhead is now limited by the detector and telescope performance.
 
 
