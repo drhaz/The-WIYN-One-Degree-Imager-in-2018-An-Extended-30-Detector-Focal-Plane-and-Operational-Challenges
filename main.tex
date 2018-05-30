@@ -1,8 +1,17 @@
 \documentclass[]{spieman}
 
-\usepackage[utf8]{inputenc} \usepackage{amsmath,amsfonts,amssymb}
-\usepackage{graphicx} \usepackage{grffile} \usepackage[colorlinks=true,
-allcolors=blue]{hyperref} \usepackage{pdflscape} \usepackage{afterpage}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amsfonts,amssymb}
+\usepackage{graphicx} 
+\usepackage{grffile} 
+\usepackage[colorlinks=true, allcolors=blue]{hyperref} 
+\usepackage{pdflscape} 
+\usepackage{afterpage}
+\usepackage[symbol]{footmisc}
+\pagenumbering{gobble}
+
+\newcommand\procspie{{Proc.~SPIE}}
+
 
 % Title definition
 \title {The WIYN One Degree Imager in 2018: An Extended 30-Detector Focal Plane}
@@ -184,14 +193,20 @@ populated with 64 OTA detectors, the temperature could not be held stable due to
 the need to throttle the output drain voltage during integration.
 
 
-The Stargrasp CCD controller\cite{Onaka2008} used in ODI can control one or two
+The Stargrasp CCD controller\cite{onaka2008} used in ODI can control one or two
 detectors per board. For pODI, a maximum of one detector was connected per CCD,
-and the cross-talk behaviour for two connected detectors was not yet
+and the cross-talk behavior for two connected detectors was not yet
 demonstrated in ODI. In the 5x6 ODI focal plane, 2/3 of the detectors share a
 controller board, whereas 1/3 of the detectors are controlled by a single
 Stargrasp board each. No evidence of cross-talk between the two channels of a
 Stargrasp board was found.
 
+The detectors in the pODI instrument were place to sample the entire 1x1 degree
+field of view of ODI, and the delivered image quality of pODI was found to be
+better then 0.4" on sky over the entire field of view in the ODI g',r',i', and
+z' band filters. The same was found for the 5x6 ODI focal plane, i.e., the 
+alignment was reproduced when the focal plane was removed and reinstalled into
+the dewar for the detector upgrade.
 
 
 \subsection{Tuning the acquisition software}
