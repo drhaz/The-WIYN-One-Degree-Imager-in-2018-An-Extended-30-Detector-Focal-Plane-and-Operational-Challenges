@@ -9,9 +9,10 @@
 \usepackage{afterpage}
 \usepackage[symbol]{footmisc}
 \pagenumbering{gobble}
+\usepackage{rotating}
 
 \newcommand\procspie{{Proc.~SPIE}}
-
+\renewcommand{\arraystretch}{1.5}
 
 % Title definition
 \title {The WIYN One Degree Imager in 2018: An Extended 30-Detector Focal Plane}
@@ -321,17 +322,7 @@ right). The new drive has worked without  errors ever after.
 
 \section{Straylight and Mitigation by additional baffles}
 
-In advance of pODI's  deployment, a detailed straylight analysis executed by
-Photon Engineering (Tucson, AZ) indicated that a significant contribution of 
-stray light was to be expected on the ODI focal plane. The two major
-contributors are (i) off-axis rays reflecting off the tertiary mirror, then the
-primary mirror, finally entering the instrument and (ii) off-axis rays
-reflecting directly off the tertiary mirror, entering the instrument. The first
-stray light mode had already been addressed by installing an additional baffle
-at the entrance aperture of ODI. The latter stray light path, however, had not
-been mitigated yet. The impact of the straylight is clearly visible in
-Figure\ref{fig_straylight}, where we show the view through the instrument (with
-the dewar removed) at the center and upper left corner of the field of view.
+
 
 
 \begin{figure}[]
@@ -352,15 +343,78 @@ the dewar removed) at the center and upper left corner of the field of view.
 \end{figure}
 
 
+
+
+In advance of pODI's  deployment, a detailed straylight analysis executed by
+Photon Engineering (Tucson, AZ) indicated that a significant contribution of 
+stray light was to be expected on the ODI focal plane. The two major
+contributors are (i) off-axis rays reflecting off the tertiary mirror, then the
+primary mirror, finally entering the instrument and (ii) off-axis rays
+reflecting directly off the tertiary mirror, entering the instrument. The first
+stray light mode had already been addressed by installing an additional baffle
+at the entrance aperture of ODI. The latter stray light path, however, had not
+been mitigated yet. The impact of the straylight is clearly visible in
+Figure\ref{fig_straylight}, where we show the view through the instrument (with
+the dewar removed) at the center and upper left corner of the field of view.
+
+
 For the initial pODI deployment with a smaller focal plane the stray light did
 not significantly affect operations; the extended focal plane of 5x6 ODI was
 found to be strongly affected by the second stray light path. For night time
 observations the stray light manifests in additional background structure that
 can be subtracted; it is detrimental for the acquisition calibrating flat field
 images, where the stray light contamination was determined to be of order of
-30\%. The straylight is loopsided in the instrument, i.e., looking through the
+30\%. The straylight is lopsided in the instrument, i.e., looking through the
 Nasmyth port, only the upper left side of port would be affected by the stray
 light, as one would conclude from Figure \ref{fig_straylight}.
+
+	\begin{sidewaysfigure} 
+		\centering
+
+		\begin{tabular}{ccccc} odi u' & odi g' & odi r' & od i'
+			i & odi z' \\ \hline \multicolumn{5}{c}{ratio of $\pm 90 \deg$ 
+				flat
+				fields, no baffle} \\[1ex]
+			
+			\includegraphics[width=0.18\columnwidth]{images/nobaffle_u.jpeg}
+			&
+			\includegraphics[width=0.18\columnwidth]{images/nobaffle_g.jpeg}
+			&
+			\includegraphics[width=0.18\columnwidth]{images/nobaffle_r.jpeg}
+			&
+			\includegraphics[width=0.18\columnwidth]{images/nobaffle_i.jpeg}
+			&
+			\includegraphics[width=0.18\columnwidth]{images/nobaffle_z.jpeg}
+			\\[2ex]
+			
+			
+			\includegraphics[width=0.18\columnwidth]{images/baffle_u.png} &
+			\includegraphics[width=0.18\columnwidth]{images/baffle_g.png} &
+			\includegraphics[width=0.18\columnwidth]{images/baffle_r.png} &
+			\includegraphics[width=0.18\columnwidth]{images/baffle_i.png} &
+			\includegraphics[width=0.18\columnwidth]{images/baffle_z.png} 
+			\\[1ex] 
+			\multicolumn{5}{c}{ratio of $\pm 90 \deg$ flat
+				fields, with baffle} \\[2ex] 
+		\end{tabular}
+		
+		\caption{\label{fig_flatfieldbaffle} Ratios of dome flat field 
+			images
+			taken at an instrument rotator angle of $+90^\circ$ and 
+			$-90^\circ$ 
+			for all ODI broad band filters. In a stray light free  
+			instrument, the ratio should 
+			be uniform. Top: flat field ratios before the telescope baffle 
+			installation. 
+			bottom: flat field ratios after telescope baffle installation. 
+			With the telescope 
+			baffles installed, only ghosting from the instrument remains in 
+			the flat field 
+			ratio; the mitigation of this ghosting is discussed in section 
+			\ref{sect_ghost} }
+		
+	\end{sidewaysfigure}
+
 
 The straylight  can be readily identified by comparing flat fields that are
 taken at different instrument rotations. We demonstrate this in Figure
@@ -373,51 +427,7 @@ in the lower left corner.
 
  
 
-\afterpage{%
-    % Flush earlier floats (otherwise order might not be correct)
-    \thispagestyle{empty}% empty page style (?)
-    \begin{landscape}% Landscape page
-        \centering % Center table
-        \begin{figure} 
-            \centering
-            \begin{tabular}{ccccc} odi u' & odi g' & odi r' & od i'
-                i & odi z' \\ \hline \multicolumn{5}{c}{ratio of $\pm 90 \deg$ flat
-                    fields, no baffle} \\[1ex]
-                 
-                \includegraphics[width=0.17\columnwidth]{images/nobaffle_u.jpeg}
-                 &
-                \includegraphics[width=0.17\columnwidth]{images/nobaffle_g.jpeg}
-                 &
-                \includegraphics[width=0.17\columnwidth]{images/nobaffle_r.jpeg}
-                 &
-                \includegraphics[width=0.17\columnwidth]{images/nobaffle_i.jpeg}
-                 &
-                \includegraphics[width=0.17\columnwidth]{images/nobaffle_z.jpeg}
-                 \\[1ex]
-                
-                
-                \includegraphics[width=0.17\columnwidth]{images/baffle_u.png} &
-                \includegraphics[width=0.17\columnwidth]{images/baffle_g.png} &
-                \includegraphics[width=0.17\columnwidth]{images/baffle_r.png} &
-                \includegraphics[width=0.17\columnwidth]{images/baffle_i.png} &
-                \includegraphics[width=0.17\columnwidth]{images/baffle_z.png} \\[1ex] 
-                \multicolumn{5}{c}{ratio of $\pm 90 \deg$ flat
-                    fields, with baffle} \\[2ex] 
-            \end{tabular}
-            
-            \caption{\label{fig_flatfieldbaffle} Ratios of dome flat field images
-                taken at an instrument rotator angle of $+90^\circ$ and $-90^\circ$ 
-                for all ODI broad band filters. In a stray light free  instrument, the ratio should 
-                be uniform. Top: flat field ratios before the telescope baffle installation. 
-                bottom: flat field ratios after telescope baffle installation. With the telscope 
-                baffles installed, only ghosting from the instrument remains in the flat field 
-                ratio; the mitigation of this ghosting is discussed in section \ref{sect_ghost} }
-            
-        \end{figure}
-        
-    \end{landscape} 
-  % Flush page
-}
+
 
 
 The straylight was mitigated by installing two additional baffles according to
@@ -444,8 +454,9 @@ reflection of a band pass filter, and the there are three layers of filter in
 ODI, the size of the pupil ghost will change with the selected filter.
 
 \begin{figure}
-\includegraphics[height=8cm]{images/odishutterpupilghostsupression.png}
-\hspace{0.5cm} \includegraphics[height=8cm]{images/odi_layeronepg.png}
+\centering
+\includegraphics[height=7cm]{images/odishutterpupilghostsupression.png}
+\hspace{0.75cm} \includegraphics[height=7cm]{images/odi_layeronepg.png}
 	
 \caption{ \label{fig_pupilghost}Left: Formation of the pupil ghost in ODI: 
     light entering the instrument from the telescope (from the right) reflects of
