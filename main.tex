@@ -63,7 +63,7 @@ driven by ODI's needs.
 %>>>> Include a list of keywords after the abstract
 
 \keywords{Ground based instrumentation, wide field imaging, CCD, Orthogonal
-    Transfer Array, Observatory Operations}
+    Transfer Array, Observatory Operations, WIYN Observatory}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Introduction}
@@ -92,7 +92,7 @@ the entire field of view in the g', r', i', and z' passbands.
 
 In 2015, ODI was upgraded and redeployed at WIYN  with an enlarged 5x6  detector
 array by adding 17 new detectors, providing a contiguous field of view of $40' \times 48'$
-on sky; this incarnation  of ODI is generally  referred to "5x6 ODI", or simply
+on sky; this incarnation  of ODI is generally  referred to as "5x6 ODI", or simply
 ODI, as no additional development of the focal plane is planned at this point.
 In this paper we report on the status of the instrument and the upgrade process.
 
@@ -160,7 +160,7 @@ instrument hardware were refurbished. We found in particular:
 	convective cooling flow in the CCD controller chassis.
 	
 	\item Inside the dewar we have identified areas of outgassing residue, which 
-	were then cleaned.
+	were cleaned.
 
 	\item The optical surfaces of ODI's corrector optics needed cleaning,
 	 including the inside of the cryostat's dewar window. 
@@ -175,7 +175,7 @@ instrument hardware were refurbished. We found in particular:
 
 \item  At the time of the dewar refurbishment, the molecular sieve material in
 the dewar (Zeolite 5-A) saturated (presumably with water), leading to an
-unmanageable short vacuum hold time of a few days only and it was hence replaced
+unmanageable short vacuum hold time of a few days, and it was hence replaced
 with fresh 5-A material. In the past, the Zeolite 5-A had been replaced on an
 annual basis due to its saturation. Since replacing the Zeolite in the dewar is
 an expensive and labour intensive operation, we started to investigate
@@ -186,26 +186,26 @@ room temperature alone, without the need for high temperature backing.
 In January 2017 the ODI molecular sieve material was replaced with Zeolite
 ZSM-5. After over a year in operation, the ZSM-5 material still performs well
 and shows no signs of degradation. We note that the ODI dewar is warmed up and
-vacuum-pumped on a regular basis (every few months), which is each time
-regenerating the ZSM-5's ability to adsorb gas.
+vacuum-pumped on a regular basis (every few months), which
+regenerates the ZSM-5's ability to adsorb gas.
 
 \end{itemize}
 
-\subsection{Focal Plane  Performance}
+\subsection{Focal Plane Performance}
 
 As expected, the Lot 7 OTA detectors performed similarly to the Lot 6 detectors, but without
 displaying the low light level charge transfer efficiency problem. Since the 5x6
 ODI focal plane utilizes both Lot 6 and Lot 7 detectors, observations that
 depend on the full field of view still require a minimum background level of the
-order of 100 electrons, which set a lower limit on the useful exposure time. If
+order of 100 electrons, which sets a lower limit on the useful exposure time. If
 the smaller field of view of the continuous Lot 7 sub-array is sufficient for the
 scientific goals of an observation, those
 restrictions do not apply. The amplifier glow in the ODI OTA detectors remains
-unchanged, and as in pODI it is mitigated by throttling the output drain  (OD) voltage
+unchanged, and, as in pODI, it is mitigated by throttling the output drain (OD) voltage
 while idling or integrating light,  and only turning it fully on during the readout
-of a detector. Detectors that are used to acquire a guide star during an exposure 
-will have their OD turned fully on and contaminate large parts of that detector 
-with amplifier glow.
+of a detector. Detectors that are used for guiding during an exposure 
+have their OD turned fully on. This and contaminates large parts of that detector 
+with amplifier glow, making it unusable for science for that exposure.
 
 Changing the OD of the OTA detectors during integration and idling versus reading out
 leads to a change in their power dissipation. We estimated the difference
