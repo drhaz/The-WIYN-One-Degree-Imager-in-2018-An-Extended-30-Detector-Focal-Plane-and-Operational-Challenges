@@ -39,12 +39,12 @@ Tucson, AZ (USA)} \affil[c]{The University of Arizona, Tucson, AZ (USA)}
 \begin{abstract}
     
 We report on the performance of the upgraded One Degree Imager (ODI) at the WIYN
-3.5 meter telescope at the Kitt Peak Observatory. The focal plane was
-expanded by an additional seventeen detectors in spring / summer 2015. The now
+3.5 meter telescope at the Kitt Peak Observatory after the focal plane was
+expanded by an additional seventeen detectors in spring 2015. The now
 thirty Orthogonal Transfer Array CCD detectors provide a total field of view of
 40’ x 48’ on the sky. The newly added detectors underwent a design revision to
-mitigate reduced charge transfer efficiency under low light conditions (fat zero
-problem). We discuss the performance of the focal plane and challenges in the
+mitigate reduced charge transfer efficiency under low light conditions. We discuss 
+the performance of the focal plane and challenges in the
 photometric calibration of the wide field of view, helped by the addition of
 telescope baffles. In a parallel project, we upgraded the instrument's three filter
 mechanism, where a degrading worm-gear mechanism was replaced by a chain drive
@@ -136,11 +136,11 @@ Lot 6 detectors filling up the surrounding area to produce a 5 by 6 detector arr
 	
 	\caption{\label{fig_focalplane} Left: Upgraded focal plane with 30 
 	detectors installed in a 5 x 6 array. Each of the 30 OTAs is 50mm 
-	$\times$ 50m in size. The remaining detector positions are 
+	$\times$ 50mm in size. The remaining detector positions are 
 	covered with blackout plates to prevent stray light. Right: Imprint of the 
 	detectors on the backdrop of a globular cluster. The total field of view is
-	of order of $40'\times 48'$.  Blue outlines indicate new Lot 7 detectors,
-	while black outlines show the Lot 6 units. Each OTA is comprised of 8x8 cells
+	of order of $40' \times 48'$.  Blue outlines indicate new Lot 7 detectors,
+	while black outlines show the Lot 6 units. Each OTA is comprised of 8  $\times$ 8 cells
 	spawning about 1' $\times$ 1' on sky. Known defective cells are marked with a
 	red cross. Note that the populated focal plane is by halt an OTA detector 
 	in R.A. with respect to the telescope's optical axis. }
@@ -165,7 +165,7 @@ instrument hardware were refurbished. We found in particular:
 	\item The lubricant in a ring bearing for the atmospheric dispersion 
 	corrector (ADC) prism had separated, and the liquid oil component started to 
 	flow over one of the prisms. The optics were cleaned with no detrimental effect 
-	to the surface and anti-reflection coating. Since the ADC bearings operate 
+	to the surface and its anti-reflection coating. Since the ADC bearings operate 
 	only at a very slow speed, the lubricant was entirely removed from the 
 	ring bearings to avoid the risk of future leaks. 
 	
@@ -190,7 +190,6 @@ regenerating the ZSM-5's ability to adsorb gas.
 
 \subsection{Focal Plane  Performance}
 
-
 As expected, the Lot 7 OTA detectors performed similarly to the Lot 6 detectors, but without
 displaying the low light level charge transfer efficiency problem. Since the 5x6
 ODI focal plane utilizes both Lot 6 and Lot 7 detectors, observations that
@@ -199,7 +198,7 @@ order of 100 electrons, which set a lower limit on the useful exposure time. If
 the smaller field of view of the continuous Lot 7 sub-array is sufficient for the
 scientific goals of an observation, those
 restrictions do not apply. The amplifier glow in the ODI OTA detectors remains
-unchanged, and as in pODI is mitigated by throttling the output drain  (OD) voltage
+unchanged, and as in pODI it is mitigated by throttling the output drain  (OD) voltage
 while idling or integrating light,  and only turning it fully on during the readout
 of a detector. Detectors that are used to acquire a guide star during an exposure 
 will have their OD turned fully on and contaminate large parts of that detector 
@@ -260,7 +259,7 @@ and commissioning phase:
 \begin{enumerate} 
     
 \item For pODI, all data were stored to NFS-mounted storage devices (Oracle ZFS
-appliance) and the delay in  writing fits files to disk was the major factor 
+appliance) and the delay in  writing FITS files to disk was the major factor 
 slowing the data handling process. As a mitigation we equipped the acquisition
 server with a Raid 5 configured local storage array, utilizing only disks with a
 6G interface; new images are now first stored on the local hard drives. The
@@ -282,7 +281,7 @@ allow writing into {\tt BufferedOutputfile}.
 each detector to help the observer to judge image quality in real time. For
 pODI, the thumbnail generation was delegated to a command line utility that was
 called after the images were written to disk, reading back (and decoding) the
-fits file again. Also, the thumbnail generation process was unnecessarily
+FITS file again. Also, the thumbnail generation process was unnecessarily
 serialized in the data acquisition process, i.e., telescope observations would
 be blocked until thumbnail images were generated.  For 5x6 ODI we have moved the
 thumbnail generation into the Java virtual machine, where the data are already in
@@ -312,7 +311,7 @@ science integration; localized atmospheric image motion compensation within an
 isokinetic patch (about 4'', or a quarter section of a single OTA detector) is
 hence not practical. Even if the amplifier glow were to be addressed
 successfully, there are practical limitations to implementing a rubber focal
-plane as envisioned in \cite{tonry2002}: The density of  bright guide stars is
+plane as envisioned in \cite{tonry2002}. The density of  bright guide stars is
 insufficient in some  optical passbands, in particular outside the galactic
 plane. It is not sufficiently established how one would proceed with the
 astrometric calibration of such a rubber focal plane, and the data processing
@@ -329,14 +328,13 @@ theoretically usable by observers on demand, but at this time there is no
 support in the  data processing pipeline. Also, ideally one would use three to
 four bright guide stars in the corners of the field of view; since the use of a
 detector for guide star acquisition requires the output drain to be turned on
-during the exposure, amplifier flow will render those detectors unsuitable for
-science use, reducing the usable field science field of view. Insofar, the
+during the exposure, amplifier glow will render those detectors unsuitable for
+science use, reducing the usable science field of view. Insofar, the
 coherent guide mode has not gained traction beyond the technical demonstration.
 
 
 
 \section{Filter change mechanism upgrade and performance}
-
 
 \begin{figure}
 	
@@ -346,7 +344,7 @@ coherent guide mode has not gained traction beyond the technical demonstration.
     
 	\caption{\label{fig_filterdrive} Left: Single filter arm test assembly. The
     42x42 cm filter is simulated by a drive. This assembly was used to stress-test
-    the filter arm drive concept with order of six thousand in and out actuation.
+    the filter arm drive concept with order of 6000 in and out actuation.
     Right: Close-up of the three-filter layer assembly during installation at the
     instrument.} 
 
@@ -360,10 +358,10 @@ surfaces, the worm gear contact was operating without lubrication (steel on
 bronze contact). During integration testing of pODI in 2012 it was realized that
 this drive would not be viable for long-term operations, as the stainless steel
 worm gear would slowly shave off the bronze gear on the filter arm. However, due
-to time and resource constraints, pODI was deployed as it was with he understanding that
-this issue wold have to be addressed eventually. In the meantime, the bronze
+to time and resource constraints, pODI was deployed as it was with the understanding that
+this issue would have to be addressed eventually. In the meantime, the bronze
 gear was replaced on an annual basis due to wear and tear, but operation was
-unreliable due to increased friction, and sometimes bronze shavings caused
+unreliable because of increased friction, and occasionally bronze shavings caused
 shorts in the filter arm position sensors.
 
 In 2014 we  started a project to redesign the filter drive, where instead of a
@@ -383,7 +381,7 @@ right). The new drive has worked without problems ever after.
 
 
 
-\section{Straylight and mitigation by additional baffles}
+\section{Stray light and mitigation by additional baffles}
 
 \begin{figure}
 \centering 
@@ -395,23 +393,24 @@ right). The new drive has worked without problems ever after.
     onto the WIYN flat field screen. Left: at the center of the field, where only
     the mirror pupil is a major contributor of illumination. Middle: View from the
     upper left corner of the instrument. Additional stray light arcs become visible.
-    The upper two arcs originate from the off-field light that enters the instrument
-    directly off a reflection off the tertiary mirror. The third lower right arc is
+    The two central  arcs originate from the off-field light that enters the instrument
+    directly off a reflection off the tertiary mirror. The  lower right arc is
     due to reflection of off field light off the tertiary, onto the primary mirror,
     and  into the instrument. Right: Same as the middle, but with ambient lights 
     switched on. The individual stray light contributors are identified.  }
 \end{figure}
 
 
-In advance of pODI's original  deployment, a detailed straylight analysis executed by
+In advance of pODI's original  deployment, a detailed stray light analysis executed by
 Photon Engineering (Tucson, AZ) indicated that a significant contribution of
 stray light was to be expected on the ODI focal plane. The two major
 contributors are (i) off-axis rays reflecting off the tertiary mirror, then the
 primary mirror, finally entering the instrument and (ii) off-axis rays
 reflecting directly off the tertiary mirror, entering the instrument. The first
 stray light mode had already been addressed by installing an additional baffle
-at the entrance aperture of ODI. The latter stray light path, however, had not
-been mitigated yet. The origin of the straylight is clearly visible in Figure 
+at the entrance aperture of pODI. The latter stray light path, however, had not
+been mitigated yet by the time of the 5x6 ODI upgrade. The origin of the stray 
+light is clearly visible in Figure 
 \ref{fig_straylight}, where we show the view through the instrument (with the
 dewar removed) at the center and upper left corner of the field of view.
 
@@ -419,16 +418,16 @@ dewar removed) at the center and upper left corner of the field of view.
 For the initial pODI deployment with a smaller focal plane the stray light did
 not significantly affect operations since the affected area was barely covered
 by detectors; the extended focal plane of 5x6 ODI however was strongly affected
-by the second stray light path, where the straylight contribution to the
+by the second stray light path, where the stray light contribution to the
 background is of order of 30\%. For night time observations the stray light
 manifests in additional background structure that can be subtracted; for the
-acquisition of flat field calibration images the straylight is detrimental.
+acquisition of flat field calibration images the stray light is detrimental.
 
 	\begin{sidewaysfigure} 
 		\centering
 
 		\begin{tabular}{ccccc} odi u' & odi g' & odi r' & od i'
-			i & odi z' \\ \hline \multicolumn{5}{c}{ratio of $\pm 90 \deg$ 
+			i & odi z' \\ \hline \multicolumn{5}{c}{ratio of $\pm 90^\circ$ 
 				flat
 				fields, no baffle} \\[1ex]
 			
@@ -450,7 +449,7 @@ acquisition of flat field calibration images the straylight is detrimental.
 			\includegraphics[width=0.18\columnwidth]{images/baffle_i.png} &
 			\includegraphics[width=0.18\columnwidth]{images/baffle_z.png} 
 			\\[1ex] 
-			\multicolumn{5}{c}{ratio of $\pm 90 \deg$ flat
+			\multicolumn{5}{c}{ratio of $\pm 90^\circ$ flat
 				fields, with baffle} \\[2ex] 
 		\end{tabular}
 		
@@ -467,12 +466,12 @@ acquisition of flat field calibration images the straylight is detrimental.
 			baffles installed, only ghosting from the instrument remains in 
 			the flat field 
 			ratio; the mitigation of this ghosting is discussed in section 
-			\ref{sect_ghost} }
+			\ref{sect_ghost}. }
 		
 	\end{sidewaysfigure}
 
 
-The straylight  can be readily identified by comparing flat fields that are
+The stray light  can be readily identified by comparing flat fields that are
 taken at different instrument rotations. We demonstrate this in Figure
 \ref{fig_flatfieldbaffle}, where for a set of the g'r'i'z' filters we show the
 ratio of dome flats that were taken with a nominal instrument rotation of plus
@@ -481,7 +480,7 @@ constant ratio of unity in those images. The flat field ratios however show a
 strong sign of (i) central pupil ghosts (see next section) and (ii) stray light
 in the lower left corner.
 
-The straylight was mitigated by installing two additional baffles according to
+The stray light was mitigated by installing two additional baffles according to
 Photon Engineering's recommendation  at the telescope: One larger ring baffle
 around the tertiary mirror, and one slim ring around the secondary baffle. These
 baffles sufficiently block the stray light paths that can be seen in Figure
@@ -489,7 +488,7 @@ baffles sufficiently block the stray light paths that can be seen in Figure
 telescope, causing a 2.3\% loss in collected light. For this reason, the baffles
 were designed to allow for quick removal should other observatory instruments
 cannot tolerate the throughput loss. While not studied, we expect that the Hydra
-fiber fed spectrograph located on the opposite Nasmyth port from ODI will
+fiber fed spectrograph located on the opposite Nasmyth port at the WIYN telescope will
 benefit from the baffles as well.
 
 
@@ -520,7 +519,7 @@ in-beam filter.
     the concave dewar window, and the converging beam reflects off the filter to form
     an in-focus image of the telescope pupil. Right: Ratio of a flat field taken
     with different shutter modes. The sensitivity variations between pixels and
-    detectors cancel out (shown in dark blue, indicating that the ratio is ~ 1),
+    detectors cancel out (shown in dark blue, indicating that the ratio is $\approx 1$),
     but the excess ghosting light remains.}
 \end{figure}
 
@@ -560,7 +559,7 @@ crosses the field of view, allowing effective exposure times of several seconds.
 
 A good demonstration of the pupil ghost suppression by the shutter is to divide
 a flat field where the shutter is operated conventionally by a flat field where
-the shutter was operated in the slow narrow-slit mode. Only the extra pupil
+the shutter  operated in the slow narrow-slit mode. Only the extra pupil
 ghost component remains visible in the image (Figure \ref{fig_pupilghost}).
 
 All dome flat fields are now acquired using the slow shutter mode, which has
@@ -592,13 +591,13 @@ drawn through	the instrument cavity in order to improve thermal equalization.
 
 When the shutter remains closed, the
 injected dry air is confined to the small space between the dewar window and
-shutter. Once the shutter is opened, the  humid air of the instrument cavity
+the shutter. Once the shutter is opened, the  humid air of the instrument cavity
 mixes in, and condensation can form on the cold dewar window. Condensation can
 appear within a minute after the shutter (located directly in front of the 
 dewar window) is opened.
 
 As immediate mitigation against condensation, operations of ODI are limited to
-ambient humidity below 70\%RH; the active flow of ambient air through the
+ambient humidity below 70\%RH; the forced flow of ambient air through the
 instrument cavity was inhibited, and the cavity is now purged with dry air.
 
 \item {\bf Failure of the dry air supply:} The dry air for ODI is generated by a
@@ -622,7 +621,7 @@ and are monitored with an exception alarm system.
 Long term, a redundant method of condensation prevention is desirable for
 ODI, e.g., a dewar window heater that would provide of the
 order of 60 W power. Heating strips that can be glued to the perimeter of the
-dewar window are readily available, and a the existing dewar window mount allows
+dewar window are readily available, and the existing dewar window mount allows
 for the addition of heaters with a modest machining effort.
 
 
