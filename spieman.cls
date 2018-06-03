@@ -57,7 +57,7 @@
 \oddsidemargin 0in            % for side margin of 1 in
 \evensidemargin 0in           % for side margin of 1 in
 %
-\textheight 9in                 % 22.9 cm
+\textheight 8.8in                 % 22.9 cm
 \textwidth 6.5in                % 16.5 cm
 \headheight 0in \headsep 0in    % avoid extra space for header
 \pagestyle{plain}               % page numbers is default; use empty for no numbers
